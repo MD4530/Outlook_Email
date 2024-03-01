@@ -27,9 +27,7 @@ if __name__ =="__main__":
     excelFileModifyUserNmae= "AES System"
     filePath=""
     
-    # runTimeStoreFile =r"\\10.144.10.11\data\Sales\Estimating\Software\outlook_email\runTimeStore.xlsm"
-    # o365_token_file= r"\\10.144.10.11\data\Sales\Estimating\Software\outlook_email\o365_token.txt"
-    
+   
     runTimeStoreFile =r"C:\Users\atiqu\Desktop\outlook_email\runTimeStore.xlsm"
     o365_token_file= r"C:\Users\atiqu\Desktop\outlook_email\o365_token.txt"
     
@@ -41,7 +39,7 @@ if __name__ =="__main__":
             excelFileModifyUserNmae =modifyerNameAndPath[0]
             filePath =modifyerNameAndPath[1]
     except:
-        filePath =r"\\10.144.10.11\data\Sales\Estimating\Software\outlook_email\Manheim Raw Materials Inventory Transfer file - Brian.xlsm"
+        filePath =r""
         # logged username
         GetUserNameExW = ctypes.windll.secur32.GetUserNameExW
         name_display = 3
@@ -72,7 +70,7 @@ if __name__ =="__main__":
         ####___________________3 methods that res for sending, authenticate and token refresh
         def SendEmail (account):
             print ("Sending email  ---------------------------------")
-            m_mailbox = account.mailbox(resource='system@aesclean.com')
+            m_mailbox = account.mailbox(resource='senderramil.com')
             
             mail = m_mailbox.new_message()
             mail.to.add(listOfEmail)
